@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="container-main">
+      <div class="left-side">
+        <img src="assets/logo.png" alt="">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html" class="list-active">My Project</a></li>
+        </ul>
+      </div>
+      <div class="rigth-side">
+        <a href="contact.html">Contact me</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="blog-container">
+    <header>
+      <h3>ADD MY PROJECT</h3>
+    </header>
+    <div class="blog-main">
+      <div class="blog-size">
+        <form>
+          <div>
+            <label for="input-name">Project Name</label>
+            <input type="text" id="input-name">
+          </div>
+
+          <div class="blog-time">
+            <div>
+              <label for="star-date">Star Date</label>
+              <input type="date" id="star-date">
+            </div>
+            <div>
+              <label for="end-date">Star Date</label>
+              <input type="date" id="end-date">
+            </div>
+          </div>
+
+          <div>
+            <label for="textarea">Description</label>
+            <textarea id="textarea"></textarea>
+          </div>
+
+          <h4>Technologies</h4>
+          <div class="parent-chekbox">
+            <div class="main-left">
+              <div>
+                <input type="checkbox" value="assets/node.png" id="nodejs">
+                <label for="node-js">Node Js</label>
+              </div>
+              <div>
+                <input type="checkbox" value="assets/react.png" id="reactjs">
+                <label for="react-js">React Js</label>
+              </div>
+            </div>
+
+            <div class="main-right">
+              <div>
+                <input type="checkbox" value="assets/js.png" id="javascript">
+                <label for="next-js">JavaScript</label>
+              </div>
+              <div>
+                <input type="checkbox" value="assets/socket.png" id="socket">
+                <label for="socket">Socket IO</label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label>Upload Image</label>
+            <div class="input-image-group">
+              <label for="input-image">
+                <P>Choose</P>
+                <img src="assets/file.png" alt="File">
+              </label>
+              <input type="file" id="input-image" hidden>
+            </div>
+          </div>
+
+          <div>
+            <button type="button" onclick="addBlog()">Submit</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content-project">
+    <h3>MY PROJECT</h3>
+    <div class="content-project-main">
+      <div class="content-card">
+        <img src="assets/my-img.jpg" alt="">
+        <div class="header">
+          <a href="blog-detail.html">Judul</a>
+        </div>
+        <div class="durasi">
+          <p>durasi : 3 Month</p>
+        </div>
+        <div class="isi">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptate minus consectetur eveniet
+            asperiores
+            autem perspiciatis? Sequi eaque consequuntur dolorum temporibus harum molestiae esse officiis, reprehenderit
+            iusto, eum autem atque!
+          </p>
+        </div>
+        <div class="skill">
+          <img src="assets/node.png" alt="">
+          <img src="assets/react.png" alt="">
+          <img src="assets/js.png" alt="">
+          <img src="assets/socket.png" alt="">
+        </div>
+
+        <div class="edit-hapus">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
