@@ -304,6 +304,7 @@ h4{
 }
 .content-card{
     width: 20%;
+    height: 28rem;
     padding: 8px;
     border-radius: 5px;
     box-shadow: 0px 0px 8px gray;
@@ -318,6 +319,7 @@ h4{
 .content-card .isi{
     text-align: justify;
     font-size: 14px;
+    height: 20vh;
 }
 .content-card .skill img{
     width: 20px;

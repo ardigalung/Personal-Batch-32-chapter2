@@ -29,6 +29,7 @@ function addBlog() {
   let socket = document.getElementById('socket').checked
 
 
+  //untuk mengecek apakah true atau false dan simpan value
   if (nodejs) {
     nodejs = document.getElementById('nodejs').value
   } else { nodejs = "" }
@@ -46,7 +47,10 @@ function addBlog() {
   } else { socket = "" }
 
 
+  // files -> mengembalikan list array tempat file/ acces di array nol
   let image = document.getElementById('input-image').files[0]
+
+  // path bloob access gambar
   image = URL.createObjectURL(image)
 
   let blog = {
@@ -68,9 +72,11 @@ function addBlog() {
 
 function renderBlog() {
 
+
   let blogContent = document.getElementsByClassName('content-project-main')[0]
 
-  blogContent.innerHTML = ''
+
+  blogContent.innerHTML = renderCard() // settingan semula &  membuat card tidak menjadi double2
 
   for (let i = 0; i < blogs.length; i++) {
     blogContent.innerHTML += `
@@ -134,13 +140,13 @@ function duration(star, end) {
 
   let data3 = data2 - data1
 
-  let bulan = Math.floor(data3 / (30 * (23 * 60 * 60 * 1000)))
+  let bulan = Math.floor(data3 / (30 * (24 * 60 * 60 * 1000)))
 
   if (bulan != 0) {
     return bulan + ' Month'
   }
   else {
-    let day = Math.floor(data3 / (23 * 60 * 60 * 1000))
+    let day = Math.floor(data3 / (24 * 60 * 60 * 1000))
     if (day != 0) {
       return day + ' day ago'
     }
@@ -168,4 +174,39 @@ function duration(star, end) {
 // setInterval(() => {
 //   renderBlog()
 // }, 1000)
+
+function renderCard() {
+  return `
+  <div class="content-card">
+  <div class="image-content">
+    <img src="assets/my-img.jpg" alt="">
+  </div>
+  <div class="header">
+    <a href="blog-detail.html">Judul</a>
+  </div>
+  <div class="durasi">
+    <p>durasi : 3 Month</p>
+  </div>
+  <div class="isi">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptate minus consectetur eveniet
+      asperiores
+      autem perspiciatis? Sequi eaque consequuntur dolorum temporibus harum molestiae esse officiis, reprehenderit
+      iusto, eum autem atque!
+    </p>
+  </div>
+  <div class="skill">
+    <img src="assets/node.png" alt="">
+    <img src="assets/react.png" alt="">
+    <img src="assets/js.png" alt="">
+    <img src="assets/socket.png" alt="">
+  </div>
+
+  <div class="edit-hapus">
+    <button>Edit</button>
+    <button>Delete</button>
+  </div>
+</div>
+  `
+}
 
