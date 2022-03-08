@@ -75,7 +75,9 @@ function renderBlog() {
   for (let i = 0; i < blogs.length; i++) {
     blogContent.innerHTML += `
     <div class="content-card">
+      <div class="image-content">
         <img src="${blogs[i].image}" alt="">
+      </div>
         <div class="header">
           <a href="blog-detail.html">${blogs[i].name}</a>
         </div>
