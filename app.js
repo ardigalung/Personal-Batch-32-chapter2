@@ -210,3 +210,26 @@ function renderCard() {
   `
 }
 
+// function durationTime(star, end) {
+
+//   let data1 = new Date(star)
+//   let data2 = new Date(end)
+
+//   let data3 = data2 - data1
+
+//   let miliHari = (23 * (60 * 60 * 1000))
+//   let hari = Math.floor(data3 / miliHari) // (data3 / (23 * 60 * 60 * 1000))
+//   let bulan = Math.floor(hari / 30) //(data3 / (30 * (23 * 60 * 60 * 1000)))
+
+//   let sisaHari = hari % 30
+
+//   if (bulan != 0) {
+//     return bulan + " Month " + sisaHari + " Day "
+//   }
+//   else {
+//     return hari + " Days"
+//   }
+
+
+// }
+
