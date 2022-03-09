@@ -215,11 +215,11 @@ function durationTime(star, end) {
   let data1 = new Date(star)
   let data2 = new Date(end)
 
-  let data3 = data2 - data1
+  let data3 = data2 - data1 //milisecond
 
   let satuHari = 24 * (60 * 60 * 1000)
-  let hari = Math.floor(data3 / satuHari) // (data3 / (24 * 60 * 60 * 1000))
-  let bulan = Math.floor(hari / 30) //(data3 / (30 * (24 * 60 * 60 * 1000)))
+  let hari = Math.floor(data3 / satuHari) // (data3 / (24 * 60 * 60 * 1000)) milisecond
+  let bulan = Math.floor(data3 / (30 * (24 * 60 * 60 * 1000))) //(data3 / (30 * (24 * 60 * 60 * 1000)))
 
   let sisaHari = hari % 30 //sisa bagi
 
