@@ -88,7 +88,7 @@ function renderBlog() {
           <a href="blog-detail.html">${blogs[i].name}</a>
         </div>
         <div class="durasi">
-          <p>${duration(blogs[i].starDate, blogs[i].endDate)}</p>
+          <p>${durationTime(blogs[i].starDate, blogs[i].endDate)}</p>
         </div>
         <div class="isi">
           <p>
@@ -210,26 +210,25 @@ function renderCard() {
   `
 }
 
-// function durationTime(star, end) {
+function durationTime(star, end) {
 
-//   let data1 = new Date(star)
-//   let data2 = new Date(end)
+  let data1 = new Date(star)
+  let data2 = new Date(end)
 
-//   let data3 = data2 - data1
+  let data3 = data2 - data1
 
-//   let miliHari = (23 * (60 * 60 * 1000))
-//   let hari = Math.floor(data3 / miliHari) // (data3 / (23 * 60 * 60 * 1000))
-//   let bulan = Math.floor(hari / 30) //(data3 / (30 * (23 * 60 * 60 * 1000)))
+  let satuHari = 24 * (60 * 60 * 1000)
+  let hari = Math.floor(data3 / satuHari) // (data3 / (24 * 60 * 60 * 1000))
+  let bulan = Math.floor(hari / 30) //(data3 / (30 * (24 * 60 * 60 * 1000)))
 
-//   let sisaHari = hari % 30
+  let sisaHari = hari % 30 //sisa bagi
 
-//   if (bulan != 0) {
-//     return bulan + " Month " + sisaHari + " Day "
-//   }
-//   else {
-//     return hari + " Days"
-//   }
+  if (bulan != 0) {
+    return bulan + " Month " + sisaHari + " Days "
+  }
+  else {
+    return hari + " Day"
+  }
 
-
-// }
+}
 
